@@ -1,0 +1,512 @@
+.sites-page {
+  min-height: calc(100vh - 80px);
+  padding: 40px 8% 80px;
+  color: white;
+  box-sizing: border-box;
+}
+
+.sites-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.sites-subtitle {
+  color: rgb(246, 206, 30);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  margin-bottom: 8px;
+}
+
+.sites-header h1 {
+  font-size: clamp(32px, 4vw, 48px);
+  margin: 0;
+  font-weight: 700;
+  color: white;
+}
+
+.sites-header h1 span {
+  color: rgb(246, 206, 30);
+  text-shadow: 0 0 15px rgba(246, 206, 30, 0.15);
+}
+
+.create-site-btn {
+  background: rgb(246, 206, 30);
+  color: #07152f;
+  border: 1px solid rgb(246, 206, 30);
+  font-weight: 600;
+  font-size: 15px;
+  padding: 12px 24px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 5px 20px rgba(246, 206, 30, 0.15);
+}
+
+.create-site-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(246, 206, 30, 0.25);
+  background: rgb(255, 217, 48);
+}
+
+/* Sites Grid Layout */
+.sites-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 25px;
+}
+
+/* Glassmorphic Site Card */
+.site-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px) saturate(100%);
+  -webkit-backdrop-filter: blur(12px) saturate(100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35),
+              inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  border-radius: 20px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.site-card:hover {
+  transform: translateY(-6px);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(246, 206, 30, 0.35);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.45),
+              0 0 20px rgba(246, 206, 30, 0.08);
+}
+
+.site-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.site-badge {
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  color: rgb(246, 206, 30);
+  background: rgba(246, 206, 30, 0.12);
+  border: 1px solid rgba(246, 206, 30, 0.25);
+}
+
+.site-code {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.4);
+  font-family: monospace;
+}
+
+.site-name {
+  font-size: 22px;
+  color: white;
+  margin: 0 0 8px 0;
+  font-weight: 600;
+}
+
+.site-address {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.65);
+  margin: 0 0 15px 0;
+}
+
+.site-description {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0 0 15px 0;
+  line-height: 1.4;
+}
+
+.site-details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  padding: 14px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  margin-bottom: 16px;
+}
+
+.site-detail-item span {
+  display: block;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.45);
+  margin-bottom: 4px;
+}
+
+.site-detail-item strong {
+  font-size: 14px;
+  color: white;
+}
+
+.text-spent { color: #ff6b6b !important; }
+.text-received { color: rgb(52, 211, 153) !important; }
+
+/* Progress Bar */
+.site-progress-container {
+  margin-bottom: 16px;
+}
+
+.progress-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.progress-bar-bg {
+  width: 100%;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  border-radius: 10px;
+  transition: width 0.4s ease;
+}
+
+.fill-ok {
+  background: linear-gradient(90deg, #34d399, #10b981);
+}
+
+.fill-warning {
+  background: linear-gradient(90deg, #fbbf24, #f59e0b);
+}
+
+.fill-overbudget {
+  background: linear-gradient(90deg, #f87171, #ef4444);
+}
+
+.site-footer {
+  margin-top: auto;
+}
+
+/* Status badge variants */
+.badge-active {
+  color: rgb(52, 211, 153);
+  background: rgba(52, 211, 153, 0.1);
+  border-color: rgba(52, 211, 153, 0.3);
+}
+.badge-inactive {
+  color: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Action Buttons Row */
+.site-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.action-btn {
+  flex: 1;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid;
+}
+
+.edit-btn {
+  background: rgba(246, 206, 30, 0.1);
+  color: rgb(246, 206, 30);
+  border-color: rgba(246, 206, 30, 0.3);
+}
+.edit-btn:hover {
+  background: rgba(246, 206, 30, 0.22);
+  border-color: rgba(246, 206, 30, 0.6);
+  transform: translateY(-1px);
+}
+
+.delete-btn {
+  background: rgba(255, 107, 107, 0.08);
+  color: #ff6b6b;
+  border-color: rgba(255, 107, 107, 0.25);
+}
+.delete-btn:hover {
+  background: rgba(255, 107, 107, 0.18);
+  border-color: rgba(255, 107, 107, 0.5);
+  transform: translateY(-1px);
+}
+
+/* ── Modal Shared Styles ──────────────────────────────────────────────────── */
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.modal-content {
+  width: 100%;
+  max-width: 480px;
+  background: rgba(10, 20, 40, 0.92);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.18);
+  border-radius: 24px;
+  padding: 28px;
+  color: white;
+  box-sizing: border-box;
+  animation: modalFade 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes modalFade {
+  from { opacity: 0; transform: scale(0.94); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 15px;
+}
+.modal-header h3 {
+  font-size: 22px;
+  color: rgb(246, 206, 30);
+  margin: 0;
+}
+.close-modal-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: white;
+  font-size: 20px;
+  width: 34px; height: 34px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: all 0.2s ease;
+}
+.close-modal-btn:hover {
+  background: rgba(255, 107, 107, 0.2);
+  color: #ff6b6b;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-group-inline {
+  flex-direction: row !important;
+  align-items: center;
+  gap: 12px !important;
+}
+.form-group-inline input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: rgb(246, 206, 30);
+  cursor: pointer;
+}
+.form-group-inline label {
+  color: rgba(255, 255, 255, 0.8) !important;
+  cursor: pointer;
+}
+
+.form-modal-error {
+  background: rgba(255, 107, 107, 0.1);
+  border: 1px solid rgba(255, 107, 107, 0.3);
+  border-radius: 10px;
+  padding: 10px 14px;
+  color: #ff6b6b;
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 6px;
+}
+
+.modal-cancel-btn {
+  padding: 10px 22px;
+  background: rgba(255, 255, 255, 0.07);
+  color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.modal-cancel-btn:hover {
+  background: rgba(255, 255, 255, 0.13);
+}
+
+.modal-save-btn {
+  padding: 10px 24px;
+  background: rgb(246, 206, 30);
+  color: #07152f;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.modal-save-btn:hover {
+  background: rgb(255, 217, 48);
+  transform: translateY(-1px);
+}
+.modal-save-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.modal-delete-btn {
+  padding: 10px 24px;
+  background: rgba(255, 107, 107, 0.2);
+  color: #ff6b6b;
+  border: 1px solid rgba(255, 107, 107, 0.4);
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.modal-delete-btn:hover {
+  background: rgba(255, 107, 107, 0.35);
+}
+.modal-delete-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.delete-confirm-text {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 15px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 8px 0;
+}
+.delete-confirm-text strong {
+  color: white;
+}
+
+/* Status / Empty / Loading Cards */
+.sites-status-card {
+  text-align: center;
+  padding: 60px 30px;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(12px) saturate(100%);
+  -webkit-backdrop-filter: blur(12px) saturate(100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  max-width: 500px;
+  margin: 40px auto;
+}
+
+.sites-status-card p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 16px;
+  margin: 15px 0;
+}
+
+.error-msg {
+  color: #ff6b6b !important;
+  font-weight: 600;
+  font-size: 18px !important;
+}
+
+.error-sub {
+  font-size: 13px !important;
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.error-sub code {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: rgb(246, 206, 30);
+}
+
+.login-retry-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: rgb(246, 206, 30);
+  color: #07152f;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+}
+
+.login-retry-btn:hover {
+  transform: translateY(-2px);
+  background: rgb(255, 217, 48);
+}
+
+/* Loading Spinner */
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(255, 255, 255, 0.1);
+  border-left-color: rgb(246, 206, 30);
+  border-radius: 50%;
+  margin: 0 auto;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 600px) {
+  .sites-page {
+    padding: 20px 15px 60px;
+  }
+
+  .sites-header {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 25px;
+  }
+
+  .create-site-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .sites-grid {
+    grid-template-columns: 1fr;
+  }
+}

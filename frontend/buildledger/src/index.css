@@ -1,0 +1,8 @@
+body{
+    font-family: 'Oxygen';
+    background: url('assets/bakground.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}

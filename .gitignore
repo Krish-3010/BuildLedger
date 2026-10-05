@@ -1,0 +1,77 @@
+# Environment & Secret Files
+.env
+.env.local
+.env.*.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env
+!*.env.example
+
+# Node / Frontend Dependencies & Build Output
+node_modules/
+dist/
+dist-ssr/
+build/
+.out/
+.next/
+.vite/
+.cache/
+
+# Java / Maven Backend Build Output
+target/
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+hs_err_pid*
+replay_pid*
+
+# Logs & Temporary Files
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Databases & Local Storage
+*.sqlite
+*.sqlite3
+
+# IDEs & Editor Specific Files
+.idea/
+*.iws
+*.iml
+*.ipr
+.vscode/*
+!.vscode/extensions.json
+!.vscode/launch.json
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+/nbproject/private/
+/nbbuild/
+/nbdist/
+/.nb-gradle/
+
+# Operating System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini

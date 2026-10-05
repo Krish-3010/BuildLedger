@@ -1,0 +1,366 @@
+.profile-page {
+  min-height: calc(100vh - 80px);
+  padding: 40px 6% 80px;
+  color: white;
+  box-sizing: border-box;
+}
+
+.profile-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+/* ── User Profile Card ──────────────────────────────────────────────────────── */
+.user-profile-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 24px 28px;
+}
+
+.user-info-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.avatar-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgb(246, 206, 30), #eab308);
+  color: #07152f;
+  font-size: 26px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 20px rgba(246, 206, 30, 0.25);
+  flex-shrink: 0;
+}
+
+.user-details h2 {
+  font-size: 24px;
+  margin: 0 0 5px 0;
+  color: white;
+  font-weight: 700;
+}
+
+.profile-subtitle {
+  color: rgb(246, 206, 30);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  margin: 0 0 4px 0;
+}
+
+.user-tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.user-role-badge,
+.user-auth-badge {
+  font-size: 12px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.profile-logout-btn {
+  padding: 11px 22px;
+  background: rgba(255, 107, 107, 0.12);
+  color: #ff6b6b;
+  border: 1px solid rgba(255, 107, 107, 0.35);
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.profile-logout-btn:hover {
+  background: rgba(255, 107, 107, 0.25);
+  border-color: rgba(255, 107, 107, 0.6);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 107, 107, 0.2);
+}
+
+/* ── Diagnosis Banner ───────────────────────────────────────────────────────── */
+.diagnosis-banner {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 20px 26px;
+  border-left: 5px solid;
+}
+
+.diagnosis-icon {
+  font-size: 30px;
+  flex-shrink: 0;
+}
+
+.diagnosis-title-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 4px;
+  flex-wrap: wrap;
+}
+
+.diagnosis-title-row h3 {
+  margin: 0;
+  font-size: 17px;
+  color: white;
+}
+
+.status-pill {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 20px;
+  letter-spacing: 0.8px;
+  white-space: nowrap;
+}
+
+.health-excellent { border-left-color: #34d399; }
+.health-excellent .status-pill {
+  background: rgba(52, 211, 153, 0.18);
+  color: #34d399;
+  border: 1px solid rgba(52, 211, 153, 0.35);
+}
+
+.health-caution { border-left-color: #fbbf24; }
+.health-caution .status-pill {
+  background: rgba(251, 191, 36, 0.18);
+  color: #fbbf24;
+  border: 1px solid rgba(251, 191, 36, 0.35);
+}
+
+.health-warning { border-left-color: #f87171; }
+.health-warning .status-pill {
+  background: rgba(248, 113, 113, 0.18);
+  color: #f87171;
+  border: 1px solid rgba(248, 113, 113, 0.35);
+}
+
+.diagnosis-banner p {
+  margin: 0;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+/* ── Metric Cards ───────────────────────────────────────────────────────────── */
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 14px;
+}
+
+.metric-card {
+  padding: 18px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.metric-label {
+  font-size: 10px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.4);
+  letter-spacing: 1.2px;
+}
+
+.metric-value-row {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.metric-value {
+  font-size: 18px;
+  font-weight: 800;
+  color: white;
+  word-break: break-all;
+}
+
+.metric-sub {
+  font-size: 12px;
+  color: rgb(246, 206, 30);
+}
+
+.text-budget   { color: rgb(246, 206, 30) !important; }
+.text-received { color: #34d399 !important; }
+.text-spent    { color: #f87171 !important; }
+
+/* ── Charts 2 × 2 grid ──────────────────────────────────────────────────────── */
+.charts-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+/* Each chart card */
+.chart-card {
+  padding: 20px 20px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  /* Let the card grow with the SVG's natural aspect ratio */
+  min-width: 0; /* prevents overflow in grid */
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 10px;
+}
+
+.chart-header h3 {
+  margin: 0;
+  font-size: 15px;
+  color: white;
+  font-weight: 700;
+}
+
+.chart-tag {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 3px 9px;
+  border-radius: 8px;
+  white-space: nowrap;
+}
+
+/* SVG wrapper — let the SVG scale to fill 100% width
+   and maintain its own aspect ratio (600:224) */
+.chart-svg-wrap {
+  width: 100%;
+  aspect-ratio: 600 / 224;  /* matches SVG viewBox width / total height */
+  position: relative;
+  overflow: hidden;
+}
+
+.chart-svg-wrap svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Legend */
+.chart-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* No data */
+.no-data-msg {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 13px;
+  text-align: center;
+  padding: 40px 0;
+}
+
+/* ── Quick Actions ──────────────────────────────────────────────────────────── */
+.profile-quick-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.quick-action-link {
+  flex: 1;
+  min-width: 180px;
+  text-decoration: none;
+}
+
+.quick-action-btn {
+  width: 100%;
+  padding: 13px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 12px;
+  color: rgb(246, 206, 30);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.quick-action-btn:hover {
+  background: rgba(246, 206, 30, 0.15);
+  border-color: rgba(246, 206, 30, 0.45);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* ── Status / Loading ───────────────────────────────────────────────────────── */
+.profile-status-card {
+  text-align: center;
+  padding: 60px 30px;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 20px;
+}
+
+/* ── Responsive ─────────────────────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .metrics-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .charts-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .profile-page {
+    padding: 16px 12px 60px;
+  }
+
+  .metrics-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .user-profile-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .profile-logout-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .chart-card {
+    padding: 14px 12px;
+  }
+}
